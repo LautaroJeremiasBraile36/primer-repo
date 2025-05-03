@@ -390,10 +390,20 @@ body .offcanvas-end {
   overflow: hidden;
 }
 .img-cat-otoño {
+  background-color: #be5b50;
   height: 90vh;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
+  animation: girar 2s ease-out 1;
+}
+@keyframes girar {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .text-categoria {
