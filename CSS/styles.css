@@ -366,15 +366,20 @@ body .offcanvas-end {
 
 /* ACA EMPIEZA LA PAGINA "CATEGORIAS" */
 
-.section-categorias {
-  background-color: white;
-  height: 90vh;
+.contenedor-main-categorias {
   margin-top: 10vh;
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2;
 }
+.section-categorias {
+  background-color: white;
+  height: 90vh;
+
+  width: 100%;
+}
+
+/* CATEGORIAS OTOÑO */
 
 .container-cat-otoño {
   width: 100%;
@@ -390,20 +395,10 @@ body .offcanvas-end {
   overflow: hidden;
 }
 .img-cat-otoño {
-  background-color: #be5b50;
   height: 90vh;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
-  animation: girar 2s ease-out 1;
-}
-@keyframes girar {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
 }
 
 .text-categoria {
@@ -430,9 +425,10 @@ body .offcanvas-end {
   font-size: 1.5rem;
   font-weight: 200;
   text-align: center;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
 .cat-description {
-  padding: 2px;
+  padding: 4px;
   color: white;
   font-family: poppins;
   font-weight: 400;
@@ -449,6 +445,8 @@ body .offcanvas-end {
 }
 
 .btn-cat {
+  font-family: roboto;
+  font-weight: 400;
   overflow: hidden;
   object-fit: cover;
   width: 180px;
@@ -463,10 +461,61 @@ body .offcanvas-end {
 }
 
 .btn-cat:active {
-  background-color: blueviolet;
+  background-color: rgb(255, 200, 118);
+  border: 2px solid rgb(255, 230, 0);
   transform: translateY(4px);
   box-shadow: 0 1px #2e7d32;
 }
+
+/* ACA TERMINA CAT OTOÑO */
+
+/* ACA EMPIEZA CAT PRIMAVERA */
+
+.cat-title-primavera {
+  width: 100%;
+  color: white;
+  background-color: #2e7d32;
+
+  font-family: poppins;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: center;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ACA TERMINA LA PRIMAVERA */
+
+/* ACA EMPIEZA CAT INVIERNO */
+
+.cat-title-invierno {
+  width: 100%;
+  color: white;
+  background-color: #3d90d7;
+
+  font-family: poppins;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: center;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ACA TERMINA CAT INVIERNO */
+
+/* ACA EMPIEZA CAT VERANO */
+
+.cat-title-verano {
+  width: 100%;
+  color: white;
+  background-color: #fff018;
+
+  font-family: poppins;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: center;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ACA TERMINA CAT VERANO */
 
 /* ARRANCA EL MEDIA QUERY */
 
