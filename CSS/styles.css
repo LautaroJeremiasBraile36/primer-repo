@@ -14,63 +14,192 @@
  */
 
 .main-menu {
+  width: 100%;
   min-height: 100vh;
   background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
 }
 .header {
   width: 100%;
-  height: 10vh;
-  border: 1px solid white;
-  background-color: #ffed00;
+  min-height: 10vh;
+  border-bottom: 2px solid #ffed00;
+  background-color: whitesmoke;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1;
+  box-shadow: 0px 0px 4px 0px rgb(255, 252, 76);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 #logo {
-  color: azure;
-  font-family: cursive;
+  color: #f3c623;
+  font-family: poppins;
   display: flex;
   justify-content: start;
   align-items: center;
+  text-align: start;
   margin-left: 12px;
+  margin-top: 8px;
   text-decoration: none;
 }
 
 #logo:hover {
   color: orangered;
+  transform: scale(1.02);
 }
+
+.h1-logo {
+  font-family: boldonse;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* TODO LO QUE ES NAVBAR */
 
 .container-nav {
   display: flex;
-  align-items: center;
   justify-content: end;
+  align-items: center;
+  margin-right: 12px;
+  background-color: transparent;
+}
+.navbar {
+  background-color: none;
+}
+.nav-bar {
+  background-color: transparent;
 }
 
-.nav-bar {
-  margin-right: 12px;
-  display: flex;
-  gap: 8px;
+.nav-item {
+  font-family: poppins;
 }
+
 .btn-nav-bar {
-  border-left: 1px solid white;
-  padding: 8px 12px;
+  border: transparent;
 }
+.btn-nav-bar:hover {
+  border: none;
+}
+
+.navbar-toggler {
+  color: transparent;
+}
+
+.navbar-toggler-icon {
+  color: #ffed00;
+}
+
+body .offcanvas-end {
+  width: 50% !important;
+}
+.offcanvas {
+  background-color: white;
+}
+
+.offcanvas-title {
+  font-family: poppins;
+  border-bottom: 1px solid gold;
+  animation: fadeIn 3s ease 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dropdown-menu {
+  border: 1px solid gold;
+}
+
+#offcanvasNavbar {
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* COLORES BOTONOS DROPDOWN */
+.otoño {
+  color: #be5b50;
+}
+.otoño:hover {
+  color: #be5b50;
+}
+
+.invierno {
+  color: #3d90d7;
+}
+.invierno:hover {
+  color: #3d90d7;
+}
+.primavera {
+  color: #fad0c4;
+}
+.primavera:hover {
+  color: #fad0c4;
+}
+.verano {
+  color: #ffe700;
+}
+.verano:hover {
+  color: #ffe700;
+}
+/* TERMINA COLORES BOTONOS DROPDOWN */
+
+/* HASTA ACA ES EL NAVBAR */
+
+/* EMPIEZA EL MAIN */
+
 .contenedor-main {
   width: 100%;
-  min-height: calc(100vh - 10vh - 4px);
-  border: 1px solid white;
+  min-height: calc(100vh - 10vh - 2px);
+
   box-shadow: #ffed00;
   display: grid;
 }
 
-.section {
-  height: 45vh;
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: pulso 1.5s infinite;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.seccion {
+  height: 90vh;
   width: 100%;
   background-color: white;
-  border: 1px solid #ffed00;
+
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-top: 10vh;
 }
 
 .title-page {
@@ -80,16 +209,63 @@
   font-weight: 800;
   font-family: fantasy;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+}
+.fotos-inicio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2;
+  overflow: hidden;
+}
+
+.fotos-seccion {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.texto-inicio {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#bienvenida {
+  font-family: boldonse;
+  font-size: 2.5rem;
+
+  color: white;
+  animation: slideIn 2s ease-out forwards;
+}
+#bienvenida-2 {
+  font-family: boldonse;
+  font-size: 2.5rem;
+
+  color: white;
+  animation: slideIn 2s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .section-2 {
   height: 45vh;
   width: 100%;
   background-color: white;
-  border: 1px solid #ffed00;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1;
@@ -97,9 +273,11 @@
 
 .contenedor-img {
   height: 100%;
+
   background-color: white;
   border: none;
   overflow: hidden;
+  object-fit: cover;
   padding: 12px;
   display: flex;
   justify-content: center;
@@ -116,48 +294,199 @@
 
 .container-h2 {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 12px;
 }
+
+.container-h2-precio {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-bottom: 12px;
+}
+
 .blazers {
+  font-family: poppins;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid #fabc3f;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: goldenrod;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 8px 12px;
 }
+
+/* ACA EMPIEZA EL FOOTER */
+
 .footer {
   height: 20vh;
-  background-color: blueviolet;
+  background-color: #fabc3f;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.container-icons {
+  height: 15vh;
+
   display: flex;
+  gap: 24px;
   justify-content: center;
   text-align: center;
+  align-items: end;
+  padding-bottom: 8px;
+}
+
+.icons {
+  font-size: 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: end;
   align-items: end;
 }
 
 .footer-text {
+  text-align: center;
+  align-items: end;
+  justify-content: end;
   font-size: 1rem;
   font-weight: 400;
+  margin-bottom: 0;
 }
+
+/* ACA TERMINA EL FOOTER */
+
+/* ARRANCA EL MEDIA QUERY */
 
 @media (min-width: 768px) {
   .header {
+    background-color: whitesmoke;
     position: fixed;
     z-index: 9999;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #ffed00;
   }
 
-  .section {
-    height: 100vh;
+  #logo {
+    color: #f3c623;
+  }
+  #logo:hover {
+    animation: cambioColor 5s infinite;
+  }
+  @keyframes cambioColor {
+    0% {
+      color: #ff5733;
+    }
+    25% {
+      color: #ffd000;
+    }
+    50% {
+      color: #8a00fc;
+    }
+    75% {
+      color: #ff53b4;
+    }
+    100% {
+      color: #ff5733;
+    }
+  }
+  .container-nav {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-right: 100px;
+    gap: 10px;
+    padding-left: 8px;
+  }
+  #offcanvasNavbar {
+    padding-left: 12px;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+  }
+  .btn-nav-bar {
+    border-left: 1px solid white;
+    padding: 8px 12px;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+  }
+  .nav-item {
+    font-family: poppins;
+  }
+  .btn-items {
+    text-decoration: none;
+  }
 
-    border: 1px solid whitesmoke;
+  .btn-items:hover {
+    text-decoration: none;
+    color: blueviolet;
+  }
+  .btn-items:active {
+    background-color: transparent;
+
+    box-shadow: inset 0 2px 4px (0, 0, 0, 0, 4);
+  }
+
+  .dropdown-menu {
+    border: 1px solid gold;
+  }
+
+  /* ACA TERMINA EL HEADER Y NAVBAR  */
+  /* MAIN Y SECCIONES */
+
+  .seccion {
+    margin-top: 10vh;
+    min-height: 90vh;
   }
   .section-2 {
     height: 90vh;
   }
   .img {
+    padding: 8px 12px;
+  }
+
+  .container-h2 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 12px;
+  }
+
+  .container-h2-precio {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 12px;
+  }
+
+  .blazers {
+    font-family: poppins;
+    font-size: 2.5rem;
+    font-weight: 400;
+    border: 2px solid #fabc3f;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: goldenrod;
+    object-fit: cover;
+    overflow: hidden;
     padding: 8px 12px;
   }
 }
