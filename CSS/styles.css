@@ -1,3 +1,8 @@
+@charset "UTF-8";
+/* Variables */
+/* Variables */
+/* MIXINS */
+/* FIN MIXINS */
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +17,16 @@
   flex-direction: column 1fr 1fr;
 }
  */
-
 .main-menu {
   width: 100%;
   min-height: 100vh;
   background-color: whitesmoke;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
+
 .header {
   width: 100%;
   min-height: 10vh;
@@ -33,31 +40,34 @@
   top: 0;
   z-index: 9999;
 }
-#logo {
+.header #logo {
   color: black;
   font-family: poppins;
   display: flex;
+  display: flex;
   justify-content: start;
   align-items: center;
+  flex-direction: row;
   text-align: start;
   margin-left: 12px;
   margin-top: 8px;
   text-decoration: none;
   text-shadow: 0px 1px 1px black;
 }
-
-#logo:hover {
+.header #logo:hover {
   color: rgb(240, 240, 163);
   transform: scale(1.02);
 }
-
-.h1-logo {
+.header .h1-logo {
   font-family: boldonse;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 /* TODO LO QUE ES NAVBAR */
+body .offcanvas-end {
+  width: 60% !important;
+}
 
 .container-nav {
   display: flex;
@@ -66,50 +76,35 @@
   margin-right: 12px;
   background-color: transparent;
 }
-.navbar {
+.container-nav .navbar {
   background-color: none;
 }
-.nav-bar {
+.container-nav .navbar .nav-bar {
   background-color: transparent;
 }
-
-.nav-item {
-  font-family: poppins;
-}
-
-.btn-nav-bar {
+.container-nav .navbar .nav-bar .btn-nav-bar {
   border: transparent;
 }
-.btn-nav-bar:hover {
+.container-nav .navbar .nav-bar .btn-nav-bar:hover {
   border: none;
 }
-
-.navbar-toggler {
+.container-nav .navbar .nav-bar .navbar-toggler {
   color: transparent;
 }
-
-.navbar-toggler-icon {
+.container-nav .navbar .nav-bar .navbar-toggler-icon {
   color: #ffed00;
 }
-
-body .offcanvas-end {
-  width: 60% !important;
-}
-.offcanvas {
+.container-nav .navbar .nav-bar .offcanvas {
   background-color: white;
 }
-
-.img-nav {
-  overflow: hidden;
-  object-fit: cover;
+.container-nav .navbar .nav-bar #offcanvasNavbar {
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
 }
-
-.offcanvas-title {
+.container-nav .navbar .nav-bar #offcanvasNavbar .offcanvas-title {
   font-family: poppins;
   border-bottom: 1px solid gold;
   animation: fadeIn 3s ease 1;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -118,56 +113,37 @@ body .offcanvas-end {
     opacity: 1;
   }
 }
-
-.dropdown-menu {
+.container-nav .navbar .nav-bar #offcanvasNavbar .nav-item {
+  font-family: poppins;
+  /* COLORES BOTONES DROPDOWN NAV ITEM*/
+  /* TERMINA COLORES BOTONOS DROPDOWN */
+}
+.container-nav .navbar .nav-bar #offcanvasNavbar .nav-item .dropdown-menu {
   border: 1px solid gold;
 }
-
-#offcanvasNavbar {
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-}
-
-/* COLORES BOTONOS DROPDOWN */
-.otoño {
+.container-nav .navbar .nav-bar #offcanvasNavbar .nav-item .otoño {
   color: #be5b50;
 }
-.otoño:hover {
-  color: #be5b50;
-}
-
-.invierno {
+.container-nav .navbar .nav-bar #offcanvasNavbar .nav-item .invierno {
   color: #3d90d7;
 }
-.invierno:hover {
-  color: #3d90d7;
-}
-.primavera {
+.container-nav .navbar .nav-bar #offcanvasNavbar .nav-item .primavera {
   color: #fad0c4;
 }
-.primavera:hover {
-  color: #fad0c4;
-}
-.verano {
+.container-nav .navbar .nav-bar #offcanvasNavbar .nav-item .verano {
   color: #ffe600;
 }
-.verano:hover {
-  color: #ffe700;
-}
-/* TERMINA COLORES BOTONOS DROPDOWN */
 
 /* HASTA ACA ES EL NAVBAR */
-
 /* EMPIEZA EL MAIN */
-
 .contenedor-main {
   min-width: 100%;
-  min-height: calc(100vh - 10vh - 2px);
+  min-height: calc(90vh - 2px);
   background-color: white;
   box-shadow: #ffed00;
   display: grid;
 }
-
-.btn-whatsapp {
+.contenedor-main .btn-whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -179,12 +155,12 @@ body .offcanvas-end {
   color: white;
   font-size: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   text-decoration: none;
   animation: pulso 1.5s infinite;
 }
-
 @keyframes pulso {
   0% {
     transform: scale(1);
@@ -196,69 +172,65 @@ body .offcanvas-end {
     transform: scale(1);
   }
 }
+
 .seccion {
   min-height: 90vh;
   min-width: 100%;
   background-color: white;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   overflow: hidden;
   object-fit: cover;
   margin-top: 10vh;
 }
-
-.title-page {
+.seccion .title-page {
   min-width: 100%;
   min-height: 100%;
-
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   position: relative;
   overflow: hidden;
   object-fit: cover;
 }
-.fotos-inicio {
+.seccion .title-page .fotos-inicio {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 2;
   overflow: hidden;
   object-fit: cover;
 }
-
-.fotos-seccion {
+.seccion .title-page .fotos-inicio .fotos-seccion {
   width: 100%;
   height: 90vh;
-  object-fit: cover;
   overflow: hidden;
+  object-fit: cover;
 }
-
-.texto-inicio {
+.seccion .title-page .texto-inicio {
   position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 12px;
   overflow: hidden;
   object-fit: cover;
 }
-
-#bienvenida {
+.seccion .title-page .texto-inicio #bienvenida {
   font-family: boldonse;
   font-size: 2.5rem;
-
   color: white;
   animation: slideIn 2s ease-out forwards;
   overflow: hidden;
   object-fit: cover;
 }
-#bienvenida-2 {
+.seccion .title-page .texto-inicio #bienvenida-2 {
   font-family: boldonse;
   font-size: 2.5rem;
-
   color: white;
   animation: slideIn 2s ease-out forwards;
   overflow: hidden;
@@ -283,8 +255,7 @@ body .offcanvas-end {
   margin-top: 22.5vh;
   overflow: hidden;
 }
-
-.titulo-seccion-2 {
+.section-2 .titulo-seccion-2 {
   font-family: boldonse;
   font-size: 1rem;
   color: black;
@@ -295,6 +266,7 @@ body .offcanvas-end {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   text-align: center;
   top: 0;
   margin-bottom: 22.5vh;
@@ -312,14 +284,13 @@ body .offcanvas-end {
   margin-right: 12px;
   margin-top: 12px;
 }
-
-.cards-prod {
+.productos .cards-prod {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid #cac2c2;
+  border: 1px solid #ff53b4;
+  border-radius: 24px;
   padding: 16px;
-
   text-align: center;
   margin-bottom: 24px;
   overflow: hidden;
@@ -336,15 +307,13 @@ body .offcanvas-end {
     transform: rotateY(360deg);
   }
 }
-
-.img-prod {
+.productos .cards-prod .img-prod {
   width: 100%;
   height: 80%;
   background-color: transparent;
   margin: 2px;
 }
-
-.text-prod {
+.productos .cards-prod .text-prod {
   font-family: roboto;
   font-weight: 150;
   font-size: 1rem;
@@ -363,7 +332,6 @@ body .offcanvas-end {
   font-family: boldonse;
   font-size: 1rem;
   display: flex;
-
   margin-bottom: 22.5vh;
   justify-content: center;
   align-items: center;
@@ -373,6 +341,7 @@ body .offcanvas-end {
   padding: 12px 8px;
   animation: slideIn 1s 4s 1 ease-in-out;
 }
+
 .carrusel-container {
   height: 100%;
   width: 100%;
@@ -381,17 +350,16 @@ body .offcanvas-end {
   grid-template-rows: 2;
   margin-bottom: 22.5vh;
 }
-
-.carousel {
+.carrusel-container .carousel {
   margin-bottom: 0;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   padding: 24px;
 }
-.carousel-item {
+.carrusel-container .carousel .carousel-item {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -401,15 +369,15 @@ body .offcanvas-end {
   -webkit-box-shadow: 0px -21px 25px 4px rgba(255, 83, 180, 0.61);
   -moz-box-shadow: 0px -21px 25px 4px rgba(255, 83, 180, 0.61);
 }
-
-.descripcion-pijama {
+.carrusel-container .descripcion-pijama {
   font-family: roboto;
   font-size: 2rem;
   font-weight: 100;
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  text-align: center;
   border: 1px solid;
   margin: 25px;
   padding: 12px;
@@ -417,117 +385,107 @@ body .offcanvas-end {
 }
 
 /* ACA EMPIEZA EL FOOTER */
-
 .footer {
   height: 20vh;
   background-color: whitesmoke;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   z-index: 1000;
   box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
   -webkit-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
   -moz-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
 }
-.container-icons {
-  height: 15vh;
 
+.container-icons {
   display: flex;
-  gap: 24px;
   justify-content: center;
-  text-align: center;
-  align-items: end;
-  padding-bottom: 8px;
+  align-items: center;
+  flex-direction: row;
+  height: 10vh;
+  gap: 20px;
 }
 
 .icons {
-  font-size: 2rem;
   display: flex;
-  text-align: center;
-  justify-content: end;
-  align-items: end;
-
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 2rem;
   text-decoration: none;
   color: black;
 }
 
 .footer-text {
-  text-align: center;
-  align-items: end;
-  justify-content: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 0;
 }
 
 /* ACA TERMINA EL FOOTER */
-
 /* TERMINA EL INDEX */
-
 /* ACA EMPIEZA LA PAGINA "CATEGORIAS" */
-
 .contenedor-main-categorias {
   margin-top: 10vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2;
+  /* CATEGORIAS OTOÑO */
 }
-.section-categorias {
+.contenedor-main-categorias .section-categorias {
   background-color: white;
   height: 90vh;
-
   width: 100%;
 }
-
-/* CATEGORIAS OTOÑO */
-
-.container-cat-otoño {
+.contenedor-main-categorias .container-cat-otoño {
   width: 100%;
   height: 100%;
   overflow: hidden;
   object-fit: cover;
   position: relative;
 }
-
-.card-otoño {
+.contenedor-main-categorias .container-cat-otoño .card-otoño {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  object-fit: cover;
   overflow: hidden;
+  object-fit: cover;
 }
-.img-cat-otoño {
+.contenedor-main-categorias .container-cat-otoño .card-otoño .img-cat-otoño {
   height: 90vh;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 }
-
-.text-categoria {
+.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria {
   background-color: transparent;
   position: absolute;
   bottom: 0;
   left: 0;
   height: 30vh;
   width: 100%;
-
   display: flex;
+  justify-content: center;
+  align-items: space-between;
   flex-direction: column;
   text-align: center;
-  justify-content: space-between;
-  align-items: center;
 }
-
-.cat-title {
+.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title, .contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-verano, .contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-invierno, .contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-primavera {
   width: 100%;
   color: white;
   background-color: #997025;
-
   font-family: poppins;
   font-size: 1.5rem;
   font-weight: 200;
   text-align: center;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
-.cat-description {
+.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-description {
   padding: 4px;
   color: white;
   font-family: poppins;
@@ -540,8 +498,7 @@ body .offcanvas-end {
   padding-right: 2px;
   animation: slideIn 1.5s ease-out forwards;
 }
-
-.btn-cat {
+.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .btn-cat {
   font-family: roboto;
   font-weight: 400;
   background-color: beige;
@@ -552,15 +509,15 @@ body .offcanvas-end {
   border: 1px solid rgb(255, 230, 0);
   border-radius: 12px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   margin-bottom: 20px;
   text-decoration: none;
   color: black;
   transition: all 0.1s ease-in-out;
 }
-
-.btn-cat:active {
+.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .btn-cat:active {
   background-color: rgb(255, 200, 118);
   border: 2px solid rgb(255, 230, 0);
   transform: translateY(4px);
@@ -568,70 +525,37 @@ body .offcanvas-end {
 }
 
 /* ACA TERMINA CAT OTOÑO */
-
 /* ACA EMPIEZA CAT PRIMAVERA */
-
 .cat-title-primavera {
-  width: 100%;
-  color: white;
   background-color: #2e7d32;
-
-  font-family: poppins;
-  font-size: 1.5rem;
-  font-weight: 200;
-  text-align: center;
-  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* ACA TERMINA LA PRIMAVERA */
-
 /* ACA EMPIEZA CAT INVIERNO */
-
 .cat-title-invierno {
-  width: 100%;
-  color: white;
   background-color: #3d90d7;
-
-  font-family: poppins;
-  font-size: 1.5rem;
-  font-weight: 200;
-  text-align: center;
-  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* ACA TERMINA CAT INVIERNO */
-
 /* ACA EMPIEZA CAT VERANO */
-
 .cat-title-verano {
-  width: 100%;
-  color: white;
   background-color: #fff018;
-
-  font-family: poppins;
-  font-size: 1.5rem;
-  font-weight: 200;
-  text-align: center;
-  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* ACA TERMINA CAT VERANO */
-
 /* ARRANCA EL MEDIA QUERY */
-
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .header {
     background-color: whitesmoke;
     position: fixed;
     z-index: 9999;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     border-bottom: 2px solid whitesmoke;
   }
-
-  #logo:hover {
+  .header #logo:hover {
     animation: cambioColor 5s infinite;
   }
   @keyframes cambioColor {
@@ -655,51 +579,38 @@ body .offcanvas-end {
     display: flex;
     justify-content: center;
     align-items: end;
-    margin-right: 100px;
     gap: 10px;
     padding-left: 8px;
   }
-  #offcanvasNavbar {
-    padding-left: 12px;
-  }
-  .nav-bar {
+  .container-nav .nav-bar {
     display: flex;
     justify-content: center;
     align-items: end;
+    flex-direction: row;
     gap: 10px;
   }
-  .btn-nav-bar {
-    border-left: 1px solid white;
-    padding: 8px 12px;
-    overflow: hidden;
-    display: flex;
-    gap: 10px;
+  .container-nav #offcanvasNavbar {
+    padding-left: 12px;
   }
-  .nav-item {
+  .container-nav #offcanvasNavbar .nav-item {
     font-family: poppins;
   }
-
-  .btn-items {
+  .container-nav #offcanvasNavbar .dropdown-menu {
+    border: 1px solid gold;
+  }
+  .container-nav #offcanvasNavbar .dropdown-menu .btn-items {
     text-decoration: none;
   }
-
-  .btn-items:hover {
+  .container-nav #offcanvasNavbar .dropdown-menu .btn-items:hover {
     text-decoration: none;
     color: blueviolet;
   }
-  .btn-items:active {
+  .container-nav #offcanvasNavbar .dropdown-menu .btn-items:active {
     background-color: transparent;
-
-    box-shadow: inset 0 2px 4px (0, 0, 0, 0, 4);
+    box-shadow: inset 0 2px 4px 0, 0, 0, 0, 4;
   }
-
-  .dropdown-menu {
-    border: 1px solid gold;
-  }
-
   /* ACA TERMINA EL HEADER Y NAVBAR  */
   /* MAIN Y SECCIONES */
-
   .seccion {
     margin-top: 10vh;
     min-height: 90vh;
@@ -708,13 +619,12 @@ body .offcanvas-end {
   .section-2 {
     min-height: 90vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
   }
-
-  .titulo-seccion-2 {
+  .section-2 .titulo-seccion-2 {
     font-family: boldonse;
     font-size: 2rem;
     color: black;
@@ -725,8 +635,7 @@ body .offcanvas-end {
     text-align: center;
     margin-top: 10px;
   }
-
-  .productos {
+  .section-2 .productos {
     height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -735,13 +644,13 @@ body .offcanvas-end {
     margin-left: 12px;
     margin-right: 12px;
   }
-
-  .cards-prod {
+  .section-2 .productos .cards-prod {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     border: 2px solid whitesmoke;
     padding: 12px;
-
     text-align: center;
     margin-bottom: 24px;
     overflow: hidden;
@@ -750,6 +659,7 @@ body .offcanvas-end {
     transform-style: preserve-3d;
     animation: flip 2s ease-in-out;
     animation-iteration-count: 2;
+    border-radius: 24px;
   }
   @keyframes flip {
     from {
@@ -759,15 +669,13 @@ body .offcanvas-end {
       transform: rotateY(360deg);
     }
   }
-
-  .img-prod {
+  .section-2 .productos .cards-prod .img-prod {
     width: 100%;
     height: 80%;
     background-color: transparent;
     margin: 2px;
   }
-
-  .text-prod {
+  .section-2 .productos .cards-prod .text-prod {
     font-family: roboto;
     font-weight: 250;
     font-size: 1.5rem;
@@ -776,8 +684,7 @@ body .offcanvas-end {
     border-bottom: 1px solid whitesmoke;
     box-shadow: 0px 4px 8px #ff53b4;
   }
-
-  .carrusel-title {
+  .section-2 .carrusel-title {
     font-family: boldonse;
     font-size: 2rem;
     color: black;
@@ -788,6 +695,7 @@ body .offcanvas-end {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     text-align: center;
     top: 0;
     margin-bottom: 22.5vh;
@@ -796,111 +704,102 @@ body .offcanvas-end {
     min-height: 90vh;
     width: 50%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     margin-bottom: 22.5vh;
     gap: 48px;
   }
-
-  .card-carrusel {
+  .carrusel-container .card-carrusel {
     width: 100%;
     height: 100%;
     padding: 12px 8px;
-    object-fit: cover;
     overflow: hidden;
+    object-fit: cover;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
   }
-
-  .carousel {
+  .carrusel-container .card-carrusel .carousel {
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     padding: 24px;
   }
-
-  .descripcion-pijama {
+  .carrusel-container .descripcion-pijama {
     font-family: roboto;
     font-size: 2rem;
     font-weight: 200;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    text-align: center;
     border: 1px solid;
     margin-left: 32px;
     margin-right: 32px;
     padding: 24px;
     box-shadow: 0px 2px 4px #ff53b4;
   }
-
   /* FOOTER */
-
   .footer {
     min-height: 20vh;
     background-color: whitesmoke;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-
     box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
     -webkit-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
     -moz-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
   }
-
-  .container-icons {
+  .footer .container-icons {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     margin-top: 30px;
   }
-
-  .icons {
+  .footer .container-icons .icons {
     text-decoration: none;
     color: black;
   }
-
   /* CATEGORIAS */
-
   .contenedor-main-categorias {
     margin-top: 10vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2;
   }
-  .section-categorias {
+  .contenedor-main-categorias .section-categorias {
     background-color: white;
     height: 90vh;
-
     width: 100%;
   }
-  .container-cat-otoño {
+  .contenedor-main-categorias .section-categorias .container-cat-otoño {
     width: 100%;
     height: 100%;
-
     position: relative;
   }
-
-  .card-otoño {
+  .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
-  .img-cat-otoño {
+  .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .img-cat-otoño {
     height: 90vh;
     width: 100%;
   }
-
-  .btn-cat:hover {
+  .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .btn-cat:hover {
     background-color: rgb(255, 200, 118);
     border: 2px solid rgb(255, 230, 0);
   }
 }
-
 @media (max-width: 228) {
   .productos {
     height: 80vh;
@@ -912,3 +811,5 @@ body .offcanvas-end {
     margin-top: 12px;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
