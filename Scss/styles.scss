@@ -155,30 +155,30 @@ body .offcanvas-end {
   background-color: white;
   box-shadow: #ffed00;
   display: grid;
-  .btn-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #25d366;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    font-size: 30px;
-    @include contenedor-flex();
-    text-decoration: none;
-    animation: pulso 1.5s infinite;
-    @keyframes pulso {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
+}
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 30px;
+  @include contenedor-flex();
+  text-decoration: none;
+  animation: pulso 1.5s infinite;
+  @keyframes pulso {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 }
@@ -378,28 +378,27 @@ body .offcanvas-end {
   height: 20vh;
   background-color: whitesmoke;
   @include contenedor-flex($direction: column);
-  z-index: 1000;
+
   box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
   -webkit-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
   -moz-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
-}
-.container-icons {
-  @include contenedor-flex();
-  height: 10vh;
-  gap: 20px;
-}
-
-.icons {
-  @include contenedor-flex();
-  font-size: 2rem;
-  text-decoration: none;
-  color: black;
-}
-
-.footer-text {
-  @include contenedor-flex();
-  font-size: 1rem;
-  font-weight: 400;
+  .container-icons {
+    @include contenedor-flex();
+    height: 10vh;
+    gap: 20px;
+    .icons {
+      @include contenedor-flex();
+      font-size: 2rem;
+      text-decoration: none;
+      color: #eeaeca;
+    }
+  }
+  .footer-text {
+    @include contenedor-flex();
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+  }
 }
 
 /* ACA TERMINA EL FOOTER */
@@ -417,105 +416,138 @@ body .offcanvas-end {
     background-color: white;
     height: 90vh;
     width: 100%;
-  }
-  /* CATEGORIAS OTOÑO */
+    /* CATEGORIAS OTOÑO */
 
-  .container-cat-otoño {
-    width: 100%;
-    height: 100%;
-    @include contenedor-desborde();
-    position: relative;
-    .card-otoño {
-      @include contenedor-flex($direction: column);
+    .container-cat-otoño {
+      width: 100%;
+      height: 100%;
       @include contenedor-desborde();
-      .img-cat-otoño {
-        height: 90vh;
-        width: 100%;
+      position: relative;
+      .card-otoño {
+        @include contenedor-flex($direction: column);
         @include contenedor-desborde();
-      }
-      .text-categoria {
-        background-color: transparent;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 30vh;
-        width: 100%;
-        @include contenedor-flex(center, space-between, column);
-        text-align: center;
-        .cat-title {
+        .img-cat-otoño {
+          height: 90vh;
           width: 100%;
-          color: white;
-          background-color: #997025;
-          font-family: poppins;
-          font-size: 1.5rem;
-          font-weight: 200;
-          text-align: center;
-          box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
-        }
-        .cat-description {
-          padding: 4px;
-          color: white;
-          font-family: poppins;
-          font-weight: 400;
-          font-size: 1rem;
-          text-align: center;
           @include contenedor-desborde();
-          padding-left: 2px;
-          padding-right: 2px;
-          animation: slideIn 1.5s ease-out forwards;
         }
+        .text-categoria {
+          background-color: transparent;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 30vh;
+          width: 100%;
+          @include contenedor-flex(space-between, center, column);
+          text-align: center;
+          .cat-title {
+            width: 100%;
+            color: white;
+            background-color: #997025;
+            font-family: poppins;
+            font-size: 1.5rem;
+            font-weight: 200;
+            text-align: center;
+            box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
+          }
+          .cat-title-primavera {
+            @extend .cat-title;
+            background-color: #2e7d32;
+          }
+          .cat-title-invierno {
+            @extend .cat-title;
+            background-color: #3d90d7;
+          }
+          .cat-title-verano {
+            @extend .cat-title;
+            background-color: #fff018;
+          }
+          .cat-description {
+            padding: 4px;
+            color: white;
+            font-family: poppins;
+            font-weight: 400;
+            font-size: 1rem;
+            text-align: center;
+            @include contenedor-desborde();
+            padding-left: 2px;
+            padding-right: 2px;
+            animation: slideIn 1.5s ease-out forwards;
+          }
 
-        .btn-cat {
-          font-family: roboto;
-          font-weight: 400;
-          background-color: beige;
-          @include contenedor-desborde();
-          width: 180px;
-          height: 32px;
-          border: 1px solid rgb(255, 230, 0);
-          border-radius: 12px;
-          @include contenedor-flex();
-          margin-bottom: 20px;
-          text-decoration: none;
-          color: black;
-          transition: all 0.1s ease-in-out;
-          &:active {
-            background-color: rgb(255, 200, 118);
-            border: 2px solid rgb(255, 230, 0);
-            transform: translateY(4px);
-            box-shadow: 0 1px #2e7d32;
+          .btn-cat {
+            font-family: poppins;
+            font-weight: 400;
+            background-color: beige;
+            @include contenedor-desborde();
+            width: 180px;
+            height: 32px;
+            border: 1px solid rgb(255, 230, 0);
+            border-radius: 12px;
+            @include contenedor-flex();
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: black;
+            transition: all 0.1s ease-in-out;
+            &:hover {
+              background: #eeaeca;
+              background: radial-gradient(
+                circle,
+                rgba(238, 174, 202, 1) 0%,
+                rgba(148, 187, 233, 1) 100%
+              );
+            }
+            &:active {
+              background-color: rgb(205, 214, 73);
+              border: 2px solid rgb(255, 230, 0);
+              transform: translateY(2px);
+              box-shadow: 0 1px #2e7d32;
+            }
           }
         }
       }
     }
   }
 }
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  45% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wiggle {
+  display: inline-block;
+  animation: wiggle 0.8s ease-in-out 5;
+}
 /* ACA TERMINA CAT OTOÑO */
 
 /* ACA EMPIEZA CAT PRIMAVERA */
-
-.cat-title-primavera {
-  @extend .cat-title;
-  background-color: #2e7d32;
-}
 
 /* ACA TERMINA LA PRIMAVERA */
 
 /* ACA EMPIEZA CAT INVIERNO */
 
-.cat-title-invierno {
-  @extend .cat-title;
-  background-color: #3d90d7;
-}
-
 /* ACA TERMINA CAT INVIERNO */
 
 /* ACA EMPIEZA CAT VERANO */
-
-.cat-title-verano {
-  @extend .cat-title;
-  background-color: #fff018;
-}
 
 /* ACA TERMINA CAT VERANO */
 
@@ -551,10 +583,8 @@ body .offcanvas-end {
   }
 
   .container-nav {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-
+    @include contenedor-flex($align: end);
+    margin-right: 72px;
     gap: 10px;
     padding-left: 8px;
     .nav-bar {
@@ -569,6 +599,7 @@ body .offcanvas-end {
       }
       .dropdown-menu {
         border: 1px solid gold;
+
         .btn-items {
           text-decoration: none;
           &:hover {
@@ -654,6 +685,7 @@ body .offcanvas-end {
       }
     }
     .carrusel-title {
+      width: 100%;
       font-family: boldonse;
       font-size: 2rem;
       color: black;
@@ -664,7 +696,7 @@ body .offcanvas-end {
       @include contenedor-flex();
       text-align: center;
       top: 0;
-      margin-bottom: 22.5vh;
+      margin-bottom: 45vh;
     }
   }
 
@@ -705,6 +737,7 @@ body .offcanvas-end {
 
   .footer {
     min-height: 20vh;
+    width: 100%;
     background-color: whitesmoke;
     @include contenedor-flex($direction: column);
     box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
@@ -713,9 +746,15 @@ body .offcanvas-end {
     .container-icons {
       @include contenedor-flex();
       margin-top: 30px;
+
       .icons {
         text-decoration: none;
-        color: black;
+        color: #eeaeca;
+        color: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
       }
     }
   }
@@ -727,6 +766,7 @@ body .offcanvas-end {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2;
+    width: 100%;
     .section-categorias {
       background-color: white;
       height: 90vh;
@@ -741,10 +781,10 @@ body .offcanvas-end {
             height: 90vh;
             width: 100%;
           }
-
-          .btn-cat:hover {
-            background-color: rgb(255, 200, 118);
-            border: 2px solid rgb(255, 230, 0);
+          .btn-cat {
+            &:hover {
+              color: white;
+            }
           }
         }
       }

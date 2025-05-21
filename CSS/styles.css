@@ -143,7 +143,8 @@ body .offcanvas-end {
   box-shadow: #ffed00;
   display: grid;
 }
-.contenedor-main .btn-whatsapp {
+
+.btn-whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -392,13 +393,11 @@ body .offcanvas-end {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1000;
   box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
   -webkit-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
   -moz-box-shadow: 0px -6px 17px 7px rgba(232, 228, 222, 0.48);
 }
-
-.container-icons {
+.footer .container-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,22 +405,21 @@ body .offcanvas-end {
   height: 10vh;
   gap: 20px;
 }
-
-.icons {
+.footer .container-icons .icons {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 2rem;
   text-decoration: none;
-  color: black;
+  color: #eeaeca;
 }
-
-.footer-text {
+.footer .footer-text {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  text-align: center;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -434,21 +432,21 @@ body .offcanvas-end {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2;
-  /* CATEGORIAS OTOÑO */
 }
 .contenedor-main-categorias .section-categorias {
   background-color: white;
   height: 90vh;
   width: 100%;
+  /* CATEGORIAS OTOÑO */
 }
-.contenedor-main-categorias .container-cat-otoño {
+.contenedor-main-categorias .section-categorias .container-cat-otoño {
   width: 100%;
   height: 100%;
   overflow: hidden;
   object-fit: cover;
   position: relative;
 }
-.contenedor-main-categorias .container-cat-otoño .card-otoño {
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -456,13 +454,13 @@ body .offcanvas-end {
   overflow: hidden;
   object-fit: cover;
 }
-.contenedor-main-categorias .container-cat-otoño .card-otoño .img-cat-otoño {
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .img-cat-otoño {
   height: 90vh;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 }
-.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria {
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria {
   background-color: transparent;
   position: absolute;
   bottom: 0;
@@ -470,12 +468,12 @@ body .offcanvas-end {
   height: 30vh;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   text-align: center;
 }
-.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title, .contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-verano, .contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-invierno, .contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-primavera {
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title, .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-verano, .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-invierno, .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-primavera {
   width: 100%;
   color: white;
   background-color: #997025;
@@ -485,7 +483,16 @@ body .offcanvas-end {
   text-align: center;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
-.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .cat-description {
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-primavera {
+  background-color: #2e7d32;
+}
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-invierno {
+  background-color: #3d90d7;
+}
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-title-verano {
+  background-color: #fff018;
+}
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-description {
   padding: 4px;
   color: white;
   font-family: poppins;
@@ -498,8 +505,8 @@ body .offcanvas-end {
   padding-right: 2px;
   animation: slideIn 1.5s ease-out forwards;
 }
-.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .btn-cat {
-  font-family: roboto;
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .btn-cat {
+  font-family: poppins;
   font-weight: 400;
   background-color: beige;
   overflow: hidden;
@@ -517,31 +524,51 @@ body .offcanvas-end {
   color: black;
   transition: all 0.1s ease-in-out;
 }
-.contenedor-main-categorias .container-cat-otoño .card-otoño .text-categoria .btn-cat:active {
-  background-color: rgb(255, 200, 118);
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .btn-cat:hover {
+  background: #eeaeca;
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+}
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .btn-cat:active {
+  background-color: rgb(205, 214, 73);
   border: 2px solid rgb(255, 230, 0);
-  transform: translateY(4px);
+  transform: translateY(2px);
   box-shadow: 0 1px #2e7d32;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  45% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.wiggle {
+  display: inline-block;
+  animation: wiggle 0.8s ease-in-out 5;
 }
 
 /* ACA TERMINA CAT OTOÑO */
 /* ACA EMPIEZA CAT PRIMAVERA */
-.cat-title-primavera {
-  background-color: #2e7d32;
-}
-
 /* ACA TERMINA LA PRIMAVERA */
 /* ACA EMPIEZA CAT INVIERNO */
-.cat-title-invierno {
-  background-color: #3d90d7;
-}
-
 /* ACA TERMINA CAT INVIERNO */
 /* ACA EMPIEZA CAT VERANO */
-.cat-title-verano {
-  background-color: #fff018;
-}
-
 /* ACA TERMINA CAT VERANO */
 /* ARRANCA EL MEDIA QUERY */
 @media (min-width: 768px) {
@@ -579,6 +606,8 @@ body .offcanvas-end {
     display: flex;
     justify-content: center;
     align-items: end;
+    flex-direction: row;
+    margin-right: 72px;
     gap: 10px;
     padding-left: 8px;
   }
@@ -685,6 +714,7 @@ body .offcanvas-end {
     box-shadow: 0px 4px 8px #ff53b4;
   }
   .section-2 .carrusel-title {
+    width: 100%;
     font-family: boldonse;
     font-size: 2rem;
     color: black;
@@ -698,7 +728,7 @@ body .offcanvas-end {
     flex-direction: row;
     text-align: center;
     top: 0;
-    margin-bottom: 22.5vh;
+    margin-bottom: 45vh;
   }
   .carrusel-container {
     min-height: 90vh;
@@ -748,6 +778,7 @@ body .offcanvas-end {
   /* FOOTER */
   .footer {
     min-height: 20vh;
+    width: 100%;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
@@ -766,7 +797,8 @@ body .offcanvas-end {
   }
   .footer .container-icons .icons {
     text-decoration: none;
-    color: black;
+    color: #eeaeca;
+    color: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
   }
   /* CATEGORIAS */
   .contenedor-main-categorias {
@@ -774,6 +806,7 @@ body .offcanvas-end {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2;
+    width: 100%;
   }
   .contenedor-main-categorias .section-categorias {
     background-color: white;
@@ -796,8 +829,7 @@ body .offcanvas-end {
     width: 100%;
   }
   .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .btn-cat:hover {
-    background-color: rgb(255, 200, 118);
-    border: 2px solid rgb(255, 230, 0);
+    color: white;
   }
 }
 @media (max-width: 228) {

@@ -9,3 +9,4 @@ Edén Moda es un sitio web que fue creado con el objetivo de alcanzar mayor púb
 - CSS
 - FlexBox
 - Grids
+- Sass (se aplican mixins, variables y extends)
