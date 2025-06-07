@@ -143,6 +143,11 @@ body .offcanvas-end {
   box-shadow: #ffed00;
   display: grid;
 }
+.contenedor-main .blanco {
+  height: 45vh;
+  width: 100%;
+  background-color: white;
+}
 
 .btn-whatsapp {
   position: fixed;
@@ -210,6 +215,11 @@ body .offcanvas-end {
   height: 90vh;
   overflow: hidden;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.seccion .title-page .fotos-inicio .fotos-seccion:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
 }
 .seccion .title-page .texto-inicio {
   position: absolute;
@@ -223,7 +233,7 @@ body .offcanvas-end {
 }
 .seccion .title-page .texto-inicio #bienvenida {
   font-family: boldonse;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   animation: slideIn 2s ease-out forwards;
   overflow: hidden;
@@ -231,7 +241,7 @@ body .offcanvas-end {
 }
 .seccion .title-page .texto-inicio #bienvenida-2 {
   font-family: boldonse;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   animation: slideIn 2s ease-out forwards;
   overflow: hidden;
@@ -253,7 +263,6 @@ body .offcanvas-end {
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 22.5vh;
   overflow: hidden;
 }
 .section-2 .titulo-seccion-2 {
@@ -270,9 +279,11 @@ body .offcanvas-end {
   flex-direction: row;
   text-align: center;
   top: 0;
-  margin-bottom: 22.5vh;
   overflow: hidden;
   object-fit: cover;
+  background: #a60aa6;
+  background: linear-gradient(90deg, rgb(166, 10, 166) 2%, rgb(252, 149, 149) 92%);
+  animation: slideIn 1s 2s 1 ease-in-out;
 }
 
 .productos {
@@ -315,7 +326,7 @@ body .offcanvas-end {
   margin: 2px;
 }
 .productos .cards-prod .text-prod {
-  font-family: roboto;
+  font-family: poppins;
   font-weight: 150;
   font-size: 1rem;
   padding: 12px 8px;
@@ -333,14 +344,14 @@ body .offcanvas-end {
   font-family: boldonse;
   font-size: 1rem;
   display: flex;
-  margin-bottom: 22.5vh;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-top: 1px solid whitesmoke;
-  box-shadow: 0px 2px 4px #ff53b4;
   padding: 12px 8px;
   animation: slideIn 1s 4s 1 ease-in-out;
+  background: #a60aa6;
+  background: linear-gradient(90deg, rgb(166, 10, 166) 2%, rgb(252, 149, 149) 92%);
 }
 
 .carrusel-container {
@@ -349,7 +360,6 @@ body .offcanvas-end {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2;
-  margin-bottom: 22.5vh;
 }
 .carrusel-container .carousel {
   margin-bottom: 0;
@@ -373,7 +383,7 @@ body .offcanvas-end {
 .carrusel-container .descripcion-pijama {
   font-family: roboto;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 200;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,7 +397,7 @@ body .offcanvas-end {
 
 /* ACA EMPIEZA EL FOOTER */
 .footer {
-  height: 20vh;
+  min-height: 30vh;
   background-color: whitesmoke;
   display: flex;
   justify-content: center;
@@ -459,6 +469,11 @@ body .offcanvas-end {
   width: 100%;
   overflow: hidden;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .img-cat-otoño:hover {
+  transform: scale(1.1);
+  opacity: 0.95;
 }
 .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria {
   background-color: transparent;
@@ -496,8 +511,8 @@ body .offcanvas-end {
   padding: 4px;
   color: white;
   font-family: poppins;
-  font-weight: 400;
-  font-size: 1rem;
+  font-weight: 300;
+  font-size: 0.8rem;
   text-align: center;
   overflow: hidden;
   object-fit: cover;
@@ -660,6 +675,7 @@ body .offcanvas-end {
     background-color: white;
     box-shadow: none;
     height: 10vh;
+    width: 100%;
     padding: 12px 8px;
     text-align: center;
     margin-top: 10px;
@@ -678,7 +694,7 @@ body .offcanvas-end {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid whitesmoke;
+    border: 3px solid whitesmoke;
     padding: 12px;
     text-align: center;
     margin-bottom: 24px;
@@ -705,13 +721,19 @@ body .offcanvas-end {
     margin: 2px;
   }
   .section-2 .productos .cards-prod .text-prod {
-    font-family: roboto;
-    font-weight: 250;
+    width: 100%;
+    font-family: poppins;
+    font-weight: 400;
     font-size: 1.5rem;
     padding: 12px 8px;
     border-top: 1px solid whitesmoke;
     border-bottom: 1px solid whitesmoke;
     box-shadow: 0px 4px 8px #ff53b4;
+  }
+  .section-2 .productos .cards-prod .text-prod:hover {
+    color: white;
+    background: #a60aa6;
+    background: linear-gradient(90deg, rgb(166, 10, 166) 2%, rgb(252, 149, 149) 92%);
   }
   .section-2 .carrusel-title {
     width: 100%;
@@ -738,7 +760,6 @@ body .offcanvas-end {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 22.5vh;
     gap: 48px;
   }
   .carrusel-container .card-carrusel {
@@ -753,7 +774,7 @@ body .offcanvas-end {
     flex-direction: row;
   }
   .carrusel-container .card-carrusel .carousel {
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -763,7 +784,7 @@ body .offcanvas-end {
   .carrusel-container .descripcion-pijama {
     font-family: roboto;
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 300;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -774,6 +795,11 @@ body .offcanvas-end {
     margin-right: 32px;
     padding: 24px;
     box-shadow: 0px 2px 4px #ff53b4;
+  }
+  .carrusel-container .descripcion-pijama:hover {
+    color: white;
+    background: #a60aa6;
+    background: linear-gradient(90deg, rgb(166, 10, 166) 2%, rgb(252, 149, 149) 92%);
   }
   /* FOOTER */
   .footer {
@@ -796,9 +822,13 @@ body .offcanvas-end {
     margin-top: 30px;
   }
   .footer .container-icons .icons {
+    font-size: 2.5rem;
     text-decoration: none;
     color: #eeaeca;
     color: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  }
+  .footer .container-icons .icons:hover {
+    color: #a60aa6;
   }
   /* CATEGORIAS */
   .contenedor-main-categorias {
@@ -827,6 +857,9 @@ body .offcanvas-end {
   .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .img-cat-otoño {
     height: 90vh;
     width: 100%;
+  }
+  .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .text-categoria .cat-description {
+    font-size: 1rem;
   }
   .contenedor-main-categorias .section-categorias .container-cat-otoño .card-otoño .btn-cat:hover {
     color: white;
